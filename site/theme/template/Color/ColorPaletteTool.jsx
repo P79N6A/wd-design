@@ -15,12 +15,14 @@ export default class ColorPaletteTool extends Component {
   state = {
     primaryColor: '#108ee9',
   };
+
   handleChangeColor = (e) => {
     const value = e.target ? e.target.value : e;
     this.setState({
       primaryColor: value,
     });
   }
+
   getShadeColor() {
     const color = Color(this.state.primaryColor);
     let rotate;
@@ -34,6 +36,7 @@ export default class ColorPaletteTool extends Component {
     }
     return color.darken(dark).rotate(rotate).hexString();
   }
+
   renderColorPatterns() {
     const patterns = [];
     const [count1, count2] = [5, 4];
@@ -66,6 +69,7 @@ export default class ColorPaletteTool extends Component {
     }
     return patterns;
   }
+
   render() {
     return (
       <div className="color-palette">

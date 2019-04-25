@@ -4019,13 +4019,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                className = _a$className === undefined ? '' : _a$className,
 	                onClick = _a.onClick,
 	                restProps = __rest(_a, ["type", "className", "onClick"]);
+	            var nClassName = 'button-plus ' + className;
 	            if (type === 'del') {
 	                return React.createElement(
 	                    _popconfirm2['default'],
 	                    { title: '\u786E\u8BA4\u8981\u5220\u9664\u5417?', onConfirm: onClick, style: { width: 200 } },
 	                    React.createElement(
 	                        _button2['default'],
-	                        (0, _extends3['default'])({ type: 'danger', className: 'button-plus ' + className, onClick: function onClick(e) {
+	                        (0, _extends3['default'])({ type: 'danger', className: nClassName, onClick: function onClick(e) {
 	                                return e.preventDefault();
 	                            } }, restProps),
 	                        '\u5220\u9664'
@@ -4047,29 +4048,21 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
-	
+
 	var _buttonPlus = __webpack_require__(85);
-	
+
 	Object.defineProperty(exports, 'ButtonPlus', {
-	    enumerable: true,
-	    get: function get() {
-	        return _interopRequireDefault(_buttonPlus)['default'];
-	    }
+	  enumerable: true,
+	  get: function get() {
+	    return _interopRequireDefault(_buttonPlus)['default'];
+	  }
 	});
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	/* @remove-on-es-build-begin */
-	// this file is not used if use https://github.com/ant-design/babel-plugin-import
-	var ENV = ("development");
-	if (ENV !== 'production' && ENV !== 'test' && typeof console !== 'undefined' && console.warn && typeof window !== 'undefined') {
-	    console.warn('You are using a whole package of antd, ' + 'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.');
-	}
-	/* @remove-on-es-build-end */
 
 /***/ }),
 /* 87 */

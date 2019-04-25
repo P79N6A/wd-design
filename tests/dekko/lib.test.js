@@ -25,4 +25,3 @@ $('lib/*/style')
 
 // eslint-disable-next-line
 console.log('`lib` directory is valid.');
-

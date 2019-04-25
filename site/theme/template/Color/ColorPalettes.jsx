@@ -21,9 +21,10 @@ class Palette extends Component {
     });
     this.forceUpdate();
   }
+
   render() {
     this.colorNodes = this.colorNodes || {};
-    const { name, description } = this.props.color;
+    const { color: { name, description } } = this.props;
     const colors = [];
     for (let i = 1; i <= 10; i += 1) {
       const colorText = `${name}-${i}`;

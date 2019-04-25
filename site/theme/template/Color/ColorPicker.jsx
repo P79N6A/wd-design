@@ -22,23 +22,29 @@ export default class ColorPicker extends Component {
       color: props.color,
     };
   }
+
   componentWillReceiveProps(nextProps) {
     this.setState({ color: nextProps.color });
   }
+
   handleClick = () => {
-    this.setState({ displayColorPicker: !this.state.displayColorPicker });
+    this.setState(({ displayColorPicker }) => !displayColorPicker);
   };
+
   handleClose = () => {
     this.setState({ displayColorPicker: false });
   };
+
   handleChange = (color) => {
     this.setState({ color: color.hex });
     this.props.onChange(color.hex);
   };
+
   handleChangeComplete = (color) => {
     this.setState({ color: color.hex });
     this.props.onChangeComplete(color.hex);
   };
+
   render() {
     const { small, type, position } = this.props;
 

@@ -22,9 +22,7 @@ export default class ComponentDoc extends React.Component {
   }
 
   handleExpandToggle = () => {
-    this.setState({
-      expandAll: !this.state.expandAll,
-    });
+    this.setState(({ expandAll }) => !expandAll);
   }
 
   render() {

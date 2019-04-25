@@ -5,13 +5,15 @@
  */
 import * as React from 'react';
 import { Button, Popconfirm } from 'antd';
+
 export default class ButtonPlus extends React.Component<any> {
   render() {
     const { type, className = '', onClick, ...restProps } = this.props;
+    const nClassName = `button-plus ${className}`;
     if (type === 'del') {
       return (
         <Popconfirm title="确认要删除吗?" onConfirm={onClick} style={{ width: 200 }}>
-          <Button type="danger" className={`button-plus ${className}`} onClick={(e: any) => e.preventDefault()} {...restProps}>
+          <Button type="danger" className={nClassName} onClick={(e: any) => e.preventDefault()} {...restProps}>
             删除
           </Button>
         </Popconfirm>

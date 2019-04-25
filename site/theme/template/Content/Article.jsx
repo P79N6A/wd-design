@@ -12,6 +12,7 @@ export default class Article extends React.Component {
   static contextTypes = {
     intl: PropTypes.object.isRequired,
   }
+
   componentDidMount() {
     // Add ga event click
     this.delegation = delegate(this.node, '.resource-card', 'click', (e) => {
@@ -21,6 +22,7 @@ export default class Article extends React.Component {
     }, false);
     this.componentDidUpdate();
   }
+
   componentDidUpdate() {
     const links = [...document.querySelectorAll('.outside-link.internal')];
     if (links.length === 0) {
@@ -34,12 +36,14 @@ export default class Article extends React.Component {
       }
     });
   }
+
   componentWillUnmount() {
     clearTimeout(this.pingTimer);
     if (this.delegation) {
       this.delegation.destroy();
     }
   }
+
   getArticle(article) {
     const { content } = this.props;
     const { meta } = content;
@@ -64,6 +68,7 @@ export default class Article extends React.Component {
       children: <Timeline>{timelineItems}</Timeline>,
     });
   }
+
   render() {
     const { props } = this;
     const { content } = props;

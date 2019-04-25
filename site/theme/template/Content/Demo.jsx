@@ -57,7 +57,7 @@ export default class Demo extends React.Component {
   }
 
   handleCodeExpand = () => {
-    this.setState({ codeExpand: !this.state.codeExpand });
+    this.setState(({ codeExpand }) => !codeExpand);
   }
 
   saveAnchor = (anchor) => {
@@ -203,11 +203,11 @@ export default class Demo extends React.Component {
                 <Tooltip
                   visible={state.copyTooltipVisible}
                   onVisibleChange={this.onCopyTooltipVisibleChange}
-                  title={
+                  title={(
                     <FormattedMessage
                       id={`app.demo.${state.copied ? 'copied' : 'copy'}`}
                     />
-                  }
+                  )}
                 >
                   <Icon
                     type={(state.copied && state.copyTooltipVisible) ? 'check' : 'copy'}
@@ -220,11 +220,13 @@ export default class Demo extends React.Component {
           </div>
           {
             highlightedStyle ?
-              <div key="style" className="highlight">
-                <pre>
-                  <code className="css" dangerouslySetInnerHTML={{ __html: highlightedStyle }} />
-                </pre>
-              </div> :
+              (
+                <div key="style" className="highlight">
+                  <pre>
+                    <code className="css" dangerouslySetInnerHTML={{ __html: highlightedStyle }} />
+                  </pre>
+                </div>
+              ) :
               null
           }
         </section>

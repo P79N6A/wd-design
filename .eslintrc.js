@@ -46,6 +46,13 @@ const eslintrc = {
     'function-paren-newline': 0,
     'object-curly-newline': 0,
     'no-restricted-globals': 0,
+    'operator-linebreak': [1, 'after'],
+    'react/jsx-one-expression-per-line': 1,
+    'import/prefer-default-export': 1,
+    'react/prefer-stateless-function': 1,
+    'react/forbid-prop-types': [1, { object: 1 }],
+    'react/destructuring-assignment': 1,
+    'no-else-return': 1,
   },
 };
 

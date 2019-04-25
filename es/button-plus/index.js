@@ -37,13 +37,14 @@ var ButtonPlus = function (_React$Component) {
                 className = _a$className === undefined ? '' : _a$className,
                 onClick = _a.onClick,
                 restProps = __rest(_a, ["type", "className", "onClick"]);
+            var nClassName = 'button-plus ' + className;
             if (type === 'del') {
                 return React.createElement(
                     Popconfirm,
                     { title: '\u786E\u8BA4\u8981\u5220\u9664\u5417?', onConfirm: onClick, style: { width: 200 } },
                     React.createElement(
                         Button,
-                        _extends({ type: 'danger', className: 'button-plus ' + className, onClick: function onClick(e) {
+                        _extends({ type: 'danger', className: nClassName, onClick: function onClick(e) {
                                 return e.preventDefault();
                             } }, restProps),
                         '\u5220\u9664'

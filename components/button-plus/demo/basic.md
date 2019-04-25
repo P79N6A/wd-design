@@ -13,9 +13,8 @@ title:
 ## en-US
 
 ````jsx
-import { message } from 'antd'
-// eslint-disable-next-line
-import { ButtonPlus } from 'wdd'
+import { message } from 'antd';
+import { ButtonPlus } from 'wdd';
 
 ReactDOM.render(
   <ButtonPlus type="del" onClick={() => message.success('删除成功')}>删除</ButtonPlus>,
